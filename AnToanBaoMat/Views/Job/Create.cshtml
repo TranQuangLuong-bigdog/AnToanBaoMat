@@ -1,0 +1,49 @@
+﻿@model AnToanBaoMat.Models.Job
+
+<h2>Thêm Job</h2>
+
+<form asp-action="Create">
+
+    <div class="mb-3">
+
+        <label>Tên công việc</label>
+
+        <input asp-for="JobTitle"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Công ty</label>
+
+        <input asp-for="CompanyName"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Địa điểm</label>
+
+        <input asp-for="Location"
+               class="form-control" />
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Lương</label>
+
+        <input asp-for="Salary"
+               class="form-control" />
+
+    </div>
+
+    <button class="btn btn-success">
+
+        Lưu
+
+    </button>
+
+</form>

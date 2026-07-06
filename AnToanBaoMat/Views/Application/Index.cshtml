@@ -1,0 +1,31 @@
+﻿<tbody>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.ApplicationId</td>
+
+            <td>@item.Cvfile</td>
+
+            <td>
+
+                @if (item.ExpireTime > DateTime.Now)
+                {
+                    <span class="badge bg-success">
+                        Còn hiệu lực
+                    </span>
+                }
+                else
+                {
+                    <span class="badge bg-danger">
+                        Hết hạn
+                    </span>
+                }
+
+            </td>
+
+        </tr>
+    }
+
+</tbody>

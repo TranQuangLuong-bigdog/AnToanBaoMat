@@ -1,0 +1,281 @@
+﻿@{
+    ViewData["Title"] = "Attack Detection";
+}
+
+<div class="container-fluid mt-4">
+
+    <h2>
+
+        🚨 Attack Detection Center
+
+    </h2>
+
+    <hr>
+
+    <div class="row">
+
+        <div class="col-lg-3">
+
+            <div class="card attack danger">
+
+                <h3>
+
+                    12
+
+                </h3>
+
+                <p>
+
+                    Spam IP
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="card attack warning">
+
+                <h3>
+
+                    5
+
+                </h3>
+
+                <p>
+
+                    Bot
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="card attack success">
+
+                <h3>
+
+                    98%
+
+                </h3>
+
+                <p>
+
+                    Security Score
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="card attack info">
+
+                <h3>
+
+                    0
+
+                </h3>
+
+                <p>
+
+                    SQL Injection
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card mt-4">
+
+    <div class="card-header">
+
+        Top IP Upload
+
+    </div>
+
+    <div class="card-body">
+
+        <table class="table">
+
+            <tr>
+
+                <th>IP</th>
+
+                <th>Total</th>
+
+            </tr>
+
+            @foreach (var item in ViewBag.TopIP)
+            {
+
+                <tr>
+
+                    <td>
+
+                        @item.IP
+
+                    </td>
+
+                    <td>
+
+                        @item.Total
+
+                    </td>
+
+                </tr>
+
+            }
+
+        </table>
+
+    </div>
+
+</div>
+<div class="card mt-4">
+
+    <div class="card-header">
+
+        AI Risk Score
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="progress">
+
+            <div class="progress-bar bg-danger"
+                 style="width:35%">
+
+                35%
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <p>
+
+            Nguy cơ hiện tại
+
+            <b>
+
+                Thấp
+
+            </b>
+
+        </p>
+
+    </div>
+
+</div>
+<div class="card mt-4">
+
+    <div class="card-header">
+
+        Timeline
+
+    </div>
+
+    <div class="card-body">
+
+        <ul class="list-group">
+
+            <li class="list-group-item">
+
+                09:15
+
+                Upload thành công
+
+            </li>
+
+            <li class="list-group-item">
+
+                09:18
+
+                IP bị Block
+
+            </li>
+
+            <li class="list-group-item">
+
+                09:20
+
+                Spam Detection
+
+            </li>
+
+            <li class="list-group-item">
+
+                09:25
+
+                Bot Detection
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+<canvas id="attackChart"></canvas>
+
+<script>
+
+    new Chart(
+
+    document.getElementById("attackChart"),
+
+    {
+
+    type:"bar",
+
+    data:{
+
+    labels:[
+
+    "Spam",
+
+    "Bot",
+
+    "Upload",
+
+    "Blocked"
+
+    ],
+
+    datasets:[{
+
+    label:"Security",
+
+    data:[
+
+    15,
+
+    5,
+
+    120,
+
+    12
+
+    ]
+
+    }]
+
+    }
+
+    });
+
+</script>

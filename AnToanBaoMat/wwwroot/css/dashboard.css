@@ -1,0 +1,44 @@
+﻿.card-dashboard {
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    transition: .3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+    .card-dashboard:hover {
+        transform: translateY(-8px);
+    }
+
+    .card-dashboard h2 {
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+.card {
+    border: none;
+    border-radius: 18px;
+}
+.security-status {
+    background: #0B2447;
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
+
+    .security-status h1 {
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+.warning {
+    background: #ffc107;
+    color: black;
+}
+
+.danger {
+    background: #dc3545;
+}

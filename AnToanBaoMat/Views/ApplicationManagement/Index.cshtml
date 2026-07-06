@@ -1,0 +1,142 @@
+﻿@model IEnumerable<AnToanBaoMat.Models.Application>
+
+<h2 class="mb-4">
+
+    Quản lý CV
+
+</h2>
+
+<input id="search"
+       class="form-control mb-3"
+       placeholder="Tìm kiếm..." />
+
+<table class="table table-bordered table-hover">
+
+    <thead class="table-dark">
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Ứng viên</th>
+
+            <th>Công việc</th>
+
+            <th>Ngày gửi</th>
+
+            <th>Hết hạn</th>
+
+            <th>Hash</th>
+
+            <th>IP</th>
+
+            <th></th>
+
+        </tr>
+
+    </thead>
+
+    <tbody id="table">
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>@item.ApplicationId</td>
+
+                <td>@item.User.FullName</td>
+
+                <td>@item.Job.JobTitle</td>
+
+                <td>@item.ApplyTime</td>
+
+                <td>
+
+                    @if (item.ExpireTime > DateTime.Now)
+                    {
+                        <span class="badge bg-success">
+
+                            Còn hiệu lực
+
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">
+
+                            Hết hạn
+
+                        </span>
+                    }
+
+                </td>
+
+                <td>
+
+                    @if (!string.IsNullOrEmpty(item.FileHash))
+                    {
+                        <span class="badge bg-success">
+
+                            SHA256
+
+                        </span>
+                    }
+
+                </td>
+
+                <td>@item.UploaderIp</td>
+
+                <td>
+
+                    <a asp-action="Details"
+                       asp-route-id="@item.ApplicationId"
+                       class="btn btn-info btn-sm">
+
+                        Chi tiết
+
+                    </a>
+
+                    <a asp-controller="Download"
+                       asp-action="Download"
+                       asp-route-id="@item.ApplicationId"
+                       class="btn btn-success btn-sm">
+
+                        Download
+
+                    </a>
+
+                    <a asp-action="Delete"
+                       asp-route-id="@item.ApplicationId"
+                       class="btn btn-danger btn-sm">
+
+                        Xóa
+
+                    </a>
+
+                </td>
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>
+
+<script>
+
+    document.getElementById("search").addEventListener("keyup",function(){
+
+    let value=this.value.toLowerCase();
+
+    document.querySelectorAll("#table tr").forEach(r=>{
+
+    r.style.display=r.innerText.toLowerCase().includes(value)
+    ?"":"none";
+
+    });
+
+    });
+
+</script>

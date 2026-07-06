@@ -1,0 +1,73 @@
+﻿.register-page {
+    background: #071a38;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.register-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 25px;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+
+.register-left {
+    padding: 60px;
+}
+
+    .register-left h2 {
+        color: white;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .register-left p {
+        color: #c8dfff;
+        margin-bottom: 35px;
+    }
+
+    .register-left label {
+        color: white;
+        margin-bottom: 8px;
+    }
+
+    .register-left .form-control {
+        background: #10284d;
+        border: 1px solid rgba(255,255,255,.08);
+        color: white;
+        height: 55px;
+    }
+
+        .register-left .form-control:focus {
+            border-color: #2bbfff;
+            box-shadow: none;
+            background: #10284d;
+            color: white;
+        }
+
+.register-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+    .register-right img {
+        width: 90%;
+    }
+
+@media(max-width:992px) {
+
+    .register-box {
+        grid-template-columns: 1fr;
+    }
+
+    .register-right {
+        display: none;
+    }
+}
