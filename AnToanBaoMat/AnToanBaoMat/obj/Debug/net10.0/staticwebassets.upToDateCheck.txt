@@ -1,0 +1,174 @@
+wwwroot\css\admin.css
+wwwroot\js\upload.js
+wwwroot\css\upload.css
+wwwroot\css\report.css
+wwwroot\css\style.css
+wwwroot\css\home.css
+wwwroot\css\security.css
+wwwroot\css\login.css
+wwwroot\favicon.ico
+wwwroot\js\admin.js
+wwwroot\js\security.js
+wwwroot\js\site.js
+wwwroot\css\dashboard.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\dist\jquery.slim.js
+wwwroot\lib\jquery\dist\jquery.slim.min.js
+wwwroot\lib\jquery\dist\jquery.slim.min.map
+wwwroot\lib\jquery\LICENSE.txt
+wwwroot\css\site.css
+wwwroot\images\hero.png
+wwwroot\images\viettel.png
+wwwroot\images\cloudflare.png
+wwwroot\images\fpt.png
+wwwroot\images\google.png
+wwwroot\images\jobstreet.png
+wwwroot\images\topcv.png
+wwwroot\images\ai-security.png
+wwwroot\images\DASHBOARD.png
+wwwroot\css\register.css
+wwwroot\encrypt\decrypt_196e1caf-4cc4-43ea-bc0c-33849a749f9f
+wwwroot\encrypt\196e1caf-4cc4-43ea-bc0c-33849a749f9f.enc.enc
+wwwroot\encrypt\196e1caf-4cc4-43ea-bc0c-33849a749f9f.enc
+wwwroot\uploads\decrypt\196e1caf-4cc4-43ea-bc0c-33849a749f9f.pdf
+wwwroot\uploads\cv\a9de061e-4d94-4c62-b24c-ded686d16e1c.enc
+wwwroot\uploads\cv\ae3790a4-407c-4579-bd8f-1abe32b03e69.enc
+wwwroot\uploads\cv\b0d12168-6e0e-4e57-be7e-783c391f40a3.enc
+wwwroot\uploads\cv\4a876d3d-5e8e-4910-8c47-a0e56755cadb.enc
+wwwroot\uploads\cv\dd3cc8ad-9938-433d-bc93-df70a9526b62.enc
+wwwroot\uploads\cv\0c05fd06-c453-4e51-832a-4232bd0101fa.enc
+wwwroot\uploads\cv\ecdcab10-e3d6-46a6-a764-40fd289ae6f5.enc
+wwwroot\uploads\cv\93dafc8b-3bf5-4a29-837f-a8779c450580.enc
+wwwroot\uploads\cv\4122f597-d0c1-42ad-a504-99e22ce4acc4.enc
+wwwroot\uploads\cv\ce5f4dbb-e055-424a-84c4-67117399ec16.enc
+wwwroot\uploads\cv\c3715218-cc42-4052-8005-79ea3438202d.enc
+wwwroot\uploads\cv\9a679d70-b52d-456e-88d0-be0739edcb2a.enc
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery\dist\jquery.slim.min.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery\dist\jquery.slim.min.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery\dist\jquery.slim.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery\dist\jquery.min.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery\dist\jquery.min.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery\dist\jquery.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery-validation\LICENSE.md
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery-validation\dist\additional-methods.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\dashboard.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\js\upload.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\admin.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\login.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\js\security.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\js\site.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\js\admin.js
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\home.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\favicon.ico
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\security.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\style.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\report.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\upload.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\site.css
+C:\Users\luong\Desktop\An Toan Bao Mat\AnToanBaoMat\AnToanBaoMat\wwwroot\css\register.css

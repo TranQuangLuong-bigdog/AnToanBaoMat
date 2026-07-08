@@ -1,0 +1,124 @@
+﻿@model IEnumerable<AnToanBaoMat.Models.Application>
+
+@{
+    ViewData["Title"] = "Lịch sử gửi CV";
+}
+
+<div class="container mt-4">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+
+            <h3>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Lịch sử gửi CV
+            </h3>
+
+        </div>
+
+        <div class="card-body">
+
+            @if (!Model.Any())
+            {
+                <div class="alert alert-warning">
+
+                    Bạn chưa gửi CV nào.
+
+                </div>
+            }
+            else
+            {
+
+                <table class="table table-bordered table-hover">
+
+                    <thead class="table-dark">
+
+                        <tr>
+
+                            <th>#</th>
+
+                            <th>Job ID</th>
+
+                            <th>Ngày gửi</th>
+
+                            <th>IP</th>
+
+                            <th>Trạng thái</th>
+
+                            <th>Hết hạn</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+
+                                <td>@item.ApplicationId</td>
+
+                                <td>@item.JobId</td>
+
+                                <td>@item.ApplyTime?.ToString("dd/MM/yyyy HH:mm")</td>
+
+                                <td>@item.Ipaddress</td>
+
+                                <td>
+
+                                    @if (item.Status == "Đã gửi")
+                                    {
+                                        <span class="badge bg-success">
+
+                                            Đã gửi
+
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning">
+
+                                            @item.Status
+
+                                        </span>
+                                    }
+
+                                </td>
+
+                                <td>
+
+                                    @if (item.ExpireTime > DateTime.Now)
+                                    {
+                                        <span class="badge bg-success">
+
+                                            Còn hiệu lực
+
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">
+
+                                            Hết hạn
+
+                                        </span>
+                                    }
+
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            }
+
+        </div>
+
+    </div>
+
+</div>

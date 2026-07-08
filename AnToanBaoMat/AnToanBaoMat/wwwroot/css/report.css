@@ -1,0 +1,18 @@
+﻿.report-card {
+    border: none;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    transition: .3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+    .report-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .report-card h1 {
+        font-size: 48px;
+        font-weight: bold;
+    }

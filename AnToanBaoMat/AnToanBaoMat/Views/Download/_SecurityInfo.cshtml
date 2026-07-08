@@ -1,0 +1,132 @@
+﻿@model Application
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="card mb-3">
+
+            <div class="card-header">
+
+                🔐 AES
+
+            </div>
+
+            <div class="card-body">
+
+                <b>Thuật toán:</b> AES-256 CBC
+
+                <br>
+
+                <b>Trạng thái:</b>
+
+                <span class="text-success">
+
+                    ✔ Đã mã hóa
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="card mb-3">
+
+            <div class="card-header">
+
+                #️⃣ SHA256
+
+            </div>
+
+            <div class="card-body">
+
+                <b>Hash:</b>
+
+                <br>
+
+                @Model.FileHash
+
+                <br>
+
+                <span class="text-success">
+
+                    ✔ Hợp lệ
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                🔑 RSA
+
+            </div>
+
+            <div class="card-body">
+
+                Public Key
+
+                <br>
+
+                <span class="text-success">
+
+                    ✔ Generated
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                ✍ Digital Signature
+
+            </div>
+
+            <div class="card-body">
+
+                <span class="text-success">
+
+                    ✔ Verified
+
+                </span>
+
+                <br><br>
+
+                <a asp-action="SendOTP"
+                   asp-route-id="@Model.ApplicationId"
+                   class="btn btn-warning">
+
+                    📧 Xác thực OTP
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

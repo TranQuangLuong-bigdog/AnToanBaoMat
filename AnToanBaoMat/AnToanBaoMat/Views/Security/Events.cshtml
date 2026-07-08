@@ -1,0 +1,79 @@
+﻿@model IEnumerable<AnToanBaoMat.Models.SecurityEvent>
+
+<h2 class="mb-4">
+    🛡 Security Events
+</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead class="table-dark">
+
+        <tr>
+
+            <th>Thời gian</th>
+
+            <th>Địa chỉ IP</th>
+
+            <th>Loại sự kiện</th>
+
+            <th>Mô tả</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @item.EventTime
+                </td>
+
+                <td>
+                    @item.Ipaddress
+                </td>
+
+                <td>
+
+                    @if (item.EventType == "Replay Attack")
+                    {
+                        <span class="badge bg-danger">
+                            Replay Attack
+                        </span>
+                    }
+                    else if (item.EventType == "Spam Upload")
+                    {
+                        <span class="badge bg-warning text-dark">
+                            Spam Upload
+                        </span>
+                    }
+                    else if (item.EventType == "OTP Failed")
+                    {
+                        <span class="badge bg-secondary">
+                            OTP Failed
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-primary">
+                            @item.EventType
+                        </span>
+                    }
+
+                </td>
+
+                <td>
+
+                    @item.Description
+
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>

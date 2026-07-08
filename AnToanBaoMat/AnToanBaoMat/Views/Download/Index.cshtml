@@ -1,0 +1,143 @@
+﻿@model IEnumerable<AnToanBaoMat.Models.Application>
+
+<h2 class="mb-4">
+
+    Download CV
+
+</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead class="table-dark">
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Candidate</th>
+
+            <th>Job</th>
+
+            <th>Upload</th>
+
+            <th>Action</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            
+            <tr>
+
+                <td>@item.ApplicationId</td>
+
+                <td>@item.User?.FullName</td>
+
+                <td>@item.Job?.JobTitle</td>
+
+                <td>@item.ApplyTime</td>
+
+                <td>
+
+                    <button type="button"
+                            class="btn btn-primary"
+                            onclick="showSecurity(@item.ApplicationId)">
+                        🔐 Kiểm tra bảo mật
+                    </button>
+
+                </td>
+
+            </tr>
+
+        }
+        <div class="modal fade" id="securityModal" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title">
+                            🔐 Kết quả kiểm tra bảo mật
+                        </h5>
+
+                        <button type="button"
+                                class="btn-close btn-close-white"
+                                data-bs-dismiss="modal">
+                        </button>
+                    </div>
+
+                    <div class="modal-body" id="securityContent">
+
+                        Đang tải...
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </tbody>
+
+</table>
+<hr />
+
+<div class="card shadow mt-4">
+
+    <div class="card-header bg-dark text-white">
+
+        Kết quả kiểm tra bảo mật
+
+    </div>
+
+    <div class="card-body">
+
+        <div id="securityPanel">
+
+            <div class="text-muted">
+
+                Chọn một CV để kiểm tra.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+    async function showSecurity(id){
+
+        const modal =
+            new bootstrap.Modal(
+                document.getElementById('securityModal'));
+
+        document.getElementById("securityContent").innerHTML =
+            "<div class='text-center p-5'>Đang tải...</div>";
+
+        modal.show();
+
+        try{
+
+            let response =
+                await fetch("/Download/SecurityInfo?id=" + id);
+
+            let html =
+                await response.text();
+
+            document.getElementById("securityContent").innerHTML =
+                html;
+
+        }
+        catch(e){
+
+            document.getElementById("securityContent").innerHTML =
+                "<div class='alert alert-danger'>Không tải được dữ liệu.</div>";
+
+        }
+
+    }
+
+</script>

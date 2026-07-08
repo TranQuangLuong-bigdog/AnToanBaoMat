@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+
+    <title>@ViewData["Title"]</title>
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+          rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          rel="stylesheet" />
+
+    <link href="~/css/admin.css"
+          rel="stylesheet" />
+    <link href="~/css/report.css"
+          rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>Security Admin</span>
+
+            </div>
+
+            <hr />
+
+            <a asp-area="Admin"
+               asp-controller="Dashboard"
+               asp-action="Index"
+               class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Dashboard" ? "active" : "")">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+
+            </a>
+
+            <a asp-area="Admin"
+               asp-controller="Application"
+               asp-action="Index">
+
+                <i class="fa-solid fa-file-arrow-up"></i>
+
+                Quản lý CV
+
+            </a>
+
+            <a asp-area="Admin"
+               asp-controller="BlockedIp"
+               asp-action="Index">
+
+                <i class="fa-solid fa-ban"></i>
+
+                Blocked IP
+
+            </a>
+
+            <a asp-area="Admin"
+               asp-controller="CvUploadLog"
+               asp-action="Index">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Upload Logs
+
+            </a>
+
+            <a asp-area="Admin"
+               asp-controller="Security"
+               asp-action="Index">
+
+                <i class="fa-solid fa-lock"></i>
+
+                Security Center
+
+            </a>
+
+            <a asp-area="Admin"
+               asp-controller="Admin"
+               asp-action="Index">
+
+                <i class="fa-solid fa-gear"></i>
+
+                Admin Center
+
+            </a>
+            <a asp-area="Admin"
+               asp-controller="Notification"
+               asp-action="Index">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>Thông báo</span>
+
+            </a>
+
+            <a asp-area="Admin"
+               asp-controller="Profile"
+               asp-action="Index">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Hồ sơ</span>
+
+            </a>
+
+            <a asp-area="Admin"
+               asp-controller="Setting"
+               asp-action="Index">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Cài đặt</span>
+
+            </a>
+
+        </div>
+
+        <!-- Main -->
+
+        <div class="main">
+
+            <div class="topbar">
+
+                <button id="menuButton"
+                        class="btn btn-outline-primary">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <div>
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    &nbsp;&nbsp;
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    Xin chào Admin
+
+                </div>
+
+            </div>
+
+            <div class="content">
+
+                @RenderBody()
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+<script src="~/js/admin.js"></script>
+</html>

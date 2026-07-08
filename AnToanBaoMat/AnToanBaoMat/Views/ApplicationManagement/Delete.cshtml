@@ -1,0 +1,29 @@
+﻿@model AnToanBaoMat.Models.Application
+
+<h2>Xóa CV</h2>
+
+<div class="alert alert-danger">
+
+    Bạn có chắc muốn xóa CV này?
+
+</div>
+
+<form asp-action="Delete">
+
+    <input type="hidden"
+           asp-for="ApplicationId" />
+
+    <button class="btn btn-danger">
+
+        Xóa
+
+    </button>
+
+    <a asp-action="Index"
+       class="btn btn-secondary">
+
+        Hủy
+
+    </a>
+
+</form>

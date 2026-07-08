@@ -1,0 +1,79 @@
+﻿@model AnToanBaoMat.Models.CvuploadLog
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+
+            Chi tiết Upload
+
+        </div>
+
+        <div class="card-body">
+
+            <table class="table">
+
+                <tr>
+
+                    <th>User</th>
+
+                    <td>@Model.User?.FullName</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Job</th>
+
+                    <td>@Model.Job?.JobTitle</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>IP</th>
+
+                    <td>@Model.Ipaddress</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>File</th>
+
+                    <td>@Model.FileName</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Upload</th>
+
+                    <td>@Model.UploadTime</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Status</th>
+
+                    <td>@Model.Status</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Message</th>
+
+                    <td>@Model.Message</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
