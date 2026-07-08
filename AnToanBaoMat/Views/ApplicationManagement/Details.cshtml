@@ -1,0 +1,67 @@
+﻿@model AnToanBaoMat.Models.Application
+
+<h2>
+
+    Chi tiết CV
+
+</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+
+        <th>Ứng viên</th>
+
+        <td>@Model.User.FullName</td>
+
+    </tr>
+
+    <tr>
+
+        <th>Công việc</th>
+
+        <td>@Model.Job.JobTitle</td>
+
+    </tr>
+
+    <tr>
+
+        <th>IP</th>
+
+        <td>@Model.UploaderIp</td>
+
+    </tr>
+
+    <tr>
+
+        <th>Hash</th>
+
+        <td>@Model.FileHash</td>
+
+    </tr>
+
+    <tr>
+
+        <th>Token</th>
+
+        <td>@Model.SessionToken</td>
+
+    </tr>
+
+    <tr>
+
+        <th>Nonce</th>
+
+        <td>@Model.Nonce</td>
+
+    </tr>
+
+    <tr>
+
+        <th>Expire</th>
+
+        <td>@Model.ExpireTime</td>
+
+    </tr>
+
+</table>

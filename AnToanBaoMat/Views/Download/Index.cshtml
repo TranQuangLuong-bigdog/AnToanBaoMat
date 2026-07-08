@@ -1,0 +1,67 @@
+﻿@model IEnumerable<AnToanBaoMat.Models.Application>
+
+<h2 class="mb-4">
+
+    Download CV
+
+</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead class="table-dark">
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Candidate</th>
+
+            <th>Job</th>
+
+            <th>Upload</th>
+
+            <th>Action</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            
+            <tr>
+
+                <td>@item.ApplicationId</td>
+
+                <td>@item.User?.FullName</td>
+
+                <td>@item.Job?.JobTitle</td>
+
+                <td>@item.ApplyTime</td>
+
+                <td>
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success">
+
+                            @TempData["Success"]
+
+                        </div>
+                    }
+                    <a asp-action="Decrypt"
+                       asp-route-id="@item.ApplicationId"
+                       class="btn btn-primary">
+                        🔓 Giải mã & Download
+                    </a>
+
+                </td>
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>

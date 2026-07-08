@@ -1,0 +1,462 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\controllers\\applicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\controllers\\downloadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\controllers\\downloadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\download\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\download\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\areas\\admin\\services\\encryptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\areas\\admin\\services\\encryptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\models\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\models\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\data\\jobrecruitmentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\data\\jobrecruitmentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\application\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\application\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\models\\downloadlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\models\\downloadlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\controllers\\downloadlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\controllers\\downloadlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\job\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\job\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\applicationmanagement\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\applicationmanagement\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\applicationmanagement\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\applicationmanagement\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\applicationmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\applicationmanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\user\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\user\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\user\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\user\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\job\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\job\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\job\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\job\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\views\\job\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\views\\job\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\controllers\\applicationmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\controllers\\applicationmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\controllers\\jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|c:\\users\\luong\\desktop\\an toan bao mat\\antoanbaomat\\antoanbaomat\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D0097AA-8408-130B-A010-6BF5BD5593AF}|AnToanBaoMat\\AnToanBaoMat.csproj|solutionrelative:antoanbaomat\\models\\job.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "AnToanBaoMat\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowDgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-07-06T16:14:39.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EncryptionService.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Areas\\Admin\\Services\\EncryptionService.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Areas\\Admin\\Services\\EncryptionService.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Areas\\Admin\\Services\\EncryptionService.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Areas\\Admin\\Services\\EncryptionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T14:37:25.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DownloadLogController.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\DownloadLogController.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Controllers\\DownloadLogController.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\DownloadLogController.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Controllers\\DownloadLogController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAADwvxwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T12:58:12.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Download\\Index.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\Download\\Index.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Download\\Index.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\Download\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T12:57:31.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DownloadController.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\DownloadController.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Controllers\\DownloadController.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\DownloadController.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Controllers\\DownloadController.cs",
+              "ViewState": "AgIAADcBAAAAAAAAAAAQwEMBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T12:52:07.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Application\\History.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\Application\\History.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Application\\History.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\Application\\History.cshtml",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAcwHsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T12:46:35.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationController.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\ApplicationController.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Controllers\\ApplicationController.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\ApplicationController.cs*",
+              "RelativeToolTip": "AnToanBaoMat\\Controllers\\ApplicationController.cs*",
+              "ViewState": "AgIAAGoBAAAAAAAAAAAUwGsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T12:46:03.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAAwAABAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T12:43:36.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Application.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Models\\Application.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Models\\Application.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Models\\Application.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Models\\Application.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADwvyEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T16:05:35.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JobRecruitmentDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Data\\JobRecruitmentDbContext.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Data\\JobRecruitmentDbContext.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Data\\JobRecruitmentDbContext.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Data\\JobRecruitmentDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T15:37:23.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DownloadLog.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Models\\DownloadLog.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Models\\DownloadLog.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Models\\DownloadLog.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Models\\DownloadLog.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T12:59:41.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAMgBAAAAAAAAAAAAAIYBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T12:44:11.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAlwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T12:37:53.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\ApplicationManagement\\Delete.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\ApplicationManagement\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\ApplicationManagement\\Delete.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\ApplicationManagement\\Delete.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:29:01.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\ApplicationManagement\\Details.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\ApplicationManagement\\Details.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\ApplicationManagement\\Details.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\ApplicationManagement\\Details.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwEIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:28:36.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\User\\Delete.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\User\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\User\\Delete.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\User\\Delete.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:27:00.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\User\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\User\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\User\\Edit.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\User\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:26:54.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Job\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\Job\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Job\\Edit.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\Job\\Edit.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:26:03.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Job\\Delete.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\Job\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Job\\Delete.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\Job\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:24:51.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\ApplicationManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\ApplicationManagement\\Index.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\ApplicationManagement\\Index.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\ApplicationManagement\\Index.cshtml",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAIwIQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:23:34.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApplicationManagementController.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\ApplicationManagementController.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Controllers\\ApplicationManagementController.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\ApplicationManagementController.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Controllers\\ApplicationManagementController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAA0wFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T06:22:50.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Job\\Create.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\Job\\Create.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Job\\Create.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\Job\\Create.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwDAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:22:10.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\User\\Create.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\User\\Create.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\User\\Create.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\User\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:21:49.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "JobController.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\JobController.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Controllers\\JobController.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Controllers\\JobController.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Controllers\\JobController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAIwHQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T06:21:28.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Job.cs",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Models\\Job.cs",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Models\\Job.cs",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Models\\Job.cs",
+              "RelativeToolTip": "AnToanBaoMat\\Models\\Job.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T06:16:12.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Job\\Index.cshtml",
+              "RelativeDocumentMoniker": "AnToanBaoMat\\Views\\Job\\Index.cshtml",
+              "ToolTip": "C:\\Users\\luong\\Desktop\\An Toan Bao Mat\\AnToanBaoMat\\AnToanBaoMat\\Views\\Job\\Index.cshtml",
+              "RelativeToolTip": "AnToanBaoMat\\Views\\Job\\Index.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAmwEgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-06T06:16:00.228Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

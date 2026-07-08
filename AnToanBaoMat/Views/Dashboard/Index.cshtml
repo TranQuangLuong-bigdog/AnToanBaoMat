@@ -1,0 +1,655 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid mt-4">
+
+    <h2>
+
+        Xin chào
+
+        <b>
+
+            @ViewBag.User
+
+        </b>
+
+    </h2>
+
+    <hr />
+
+    <div class="row">
+
+        <div class="col-lg-3">
+
+            <div class="card card-dashboard bg-primary">
+
+                <h2>
+
+                    @ViewBag.TotalUser
+
+                </h2>
+
+                <p>
+
+                    User
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="card card-dashboard bg-success">
+
+                <h2>
+
+                    @ViewBag.TotalJob
+
+                </h2>
+
+                <p>
+
+                    Job
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="card card-dashboard bg-warning">
+
+                <h2>
+
+                    @ViewBag.TotalApplication
+
+                </h2>
+
+                <p>
+
+                    CV
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-3">
+
+            <div class="card card-dashboard bg-danger">
+
+                <h2>
+
+                    @ViewBag.TotalBlocked
+
+                </h2>
+
+                <p>
+
+                    Blocked IP
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <br />
+
+    <div class="row">
+
+        <div class="col-lg-4">
+
+            <div class="card card-dashboard">
+
+                <h3>
+
+                    @ViewBag.TodayUpload
+
+                </h3>
+
+                Upload hôm nay
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="card card-dashboard">
+
+                <h3>
+
+                    @ViewBag.ThisWeek
+
+                </h3>
+
+                7 ngày
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="card card-dashboard">
+
+                <h3>
+
+                    @ViewBag.ThisMonth
+
+                </h3>
+
+                Tháng này
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <br />
+
+    <div class="card">
+
+        <div class="card-header">
+
+            Upload gần đây
+
+        </div>
+        <h2>
+
+            @ViewBag.ExpiredCV
+
+        </h2>
+
+        <p>
+
+            CV hết hạn
+
+        </p>
+        <div class="card-body">
+
+            <table class="table table-hover">
+
+                <tr>
+
+                    <th>User</th>
+
+                    <th>Job</th>
+
+                    <th>IP</th>
+
+                    <th>Time</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                @foreach (var item in ViewBag.RecentUpload)
+                {
+
+                    <tr>
+
+                        <td>
+
+                            @item.UserId
+
+                        </td>
+
+                        <td>
+
+                            @item.JobId
+
+                        </td>
+
+                        <td>
+
+                            @item.Ipaddress
+
+                        </td>
+
+                        <td>
+
+                            @item.UploadTime
+
+                        </td>
+
+                        <td>
+
+                            @item.Status
+
+                        </td>
+
+                    </tr>
+
+                }
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="row mt-4">
+
+    <div class="col-lg-4">
+
+        <div class="card security-status">
+
+            <h3>
+
+                🟢
+
+                An toàn
+
+            </h3>
+
+            <h1>
+
+                98%
+
+            </h1>
+
+            <p>
+
+                Hệ thống đang hoạt động ổn định
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-4">
+
+        <div class="card security-status warning">
+
+            <h3>
+
+                ⚠
+
+                IP bị chặn
+
+            </h3>
+
+            <h1>
+
+                @ViewBag.TotalBlocked
+
+            </h1>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-4">
+
+        <div class="card security-status danger">
+
+            <h3>
+
+                📄
+
+                Upload Log
+
+            </h3>
+
+            <h1>
+
+                @ViewBag.TotalLog
+
+            </h1>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="row mt-5">
+
+    <div class="col-lg-6">
+
+        <div class="card p-4">
+
+            <h4>
+
+                Trạng thái IP
+
+            </h4>
+
+            <canvas id="pieChart">
+            </canvas>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-6">
+
+        <div class="card p-4">
+
+            <h4>
+
+                Upload theo tháng
+
+            </h4>
+
+            <canvas id="lineChart">
+            </canvas>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card mt-5">
+
+    <div class="card-header">
+
+        AI Security Monitor
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="progress">
+
+            <div class="progress-bar bg-success"
+                 style="width:95%">
+
+                95%
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div>
+
+            ✔ Upload Protection
+
+        </div>
+
+        <div>
+
+            ✔ IP Detection
+
+        </div>
+
+        <div>
+
+            ✔ MIME Detection
+
+        </div>
+
+        <div>
+
+            ✔ Spam Detection
+
+        </div>
+
+        <div>
+
+            ✔ Upload Logging
+
+        </div>
+
+    </div>
+
+</div>
+<hr />
+
+<div class="row">
+
+    <div class="col-lg-8">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-primary text-white">
+
+                Thống kê Upload CV
+
+            </div>
+
+            <div class="card-body">
+
+                <canvas id="uploadChart" height="100"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-4">
+
+        <div class="card shadow">
+
+            <div class="card-header bg-success text-white">
+
+                Trạng thái hệ thống
+
+            </div>
+
+            <div class="card-body">
+
+                <p>🟢 Hệ thống hoạt động bình thường</p>
+
+                <p>🟢 AES Encryption</p>
+
+                <p>🟢 SHA256 Integrity</p>
+
+                <p>🟢 Session Token</p>
+
+                <p>🟢 IP Checking</p>
+
+                <p>🟢 Download Log</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card mt-4 shadow">
+
+    <div class="card-header bg-dark text-white">
+
+        Upload gần nhất
+
+    </div>
+
+    <table class="table">
+
+        <thead>
+
+            <tr>
+
+                <th>User</th>
+
+                <th>Job</th>
+
+                <th>Time</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in ViewBag.RecentUpload)
+            {
+                <tr>
+
+                    <td>@item.UserId</td>
+
+                    <td>@item.JobId</td>
+
+                    <td>@item.UploadTime</td>
+
+                    <td>
+
+                        <span class="badge bg-success">
+
+                            Success
+
+                        </span>
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+    const ctx = document.getElementById('uploadChart');
+
+    new Chart(ctx,{
+
+    type:'bar',
+
+    data:{
+
+    labels:[
+    'T2',
+    'T3',
+    'T4',
+    'T5',
+    'T6',
+    'T7',
+    'CN'
+    ],
+
+    datasets:[{
+
+    label:'Upload CV',
+
+    data:[
+    5,
+    7,
+    4,
+    9,
+    12,
+    6,
+    8
+    ]
+
+    }]
+
+    }
+
+    });
+
+</script>
+<script>
+
+    const pie=new Chart(
+
+    document.getElementById("pieChart"),
+
+    {
+
+    type:"pie",
+
+    data:{
+
+    labels:[
+
+    "An toàn",
+
+    "Blocked"
+
+    ],
+
+    datasets:[{
+
+    data:[
+
+    @ViewBag.SafeIP,
+
+    @ViewBag.DangerIP
+
+    ]
+
+    }]
+
+    }
+
+    });
+
+    const line=new Chart(
+
+    document.getElementById("lineChart"),
+
+    {
+
+    type:"line",
+
+    data:{
+
+    labels:[
+
+    "T1",
+
+    "T2",
+
+    "T3",
+
+    "T4",
+
+    "T5",
+
+    "T6"
+
+    ],
+
+    datasets:[{
+
+    label:"Upload",
+
+    data:[
+
+    12,
+
+    25,
+
+    30,
+
+    18,
+
+    55,
+
+    42
+
+    ],
+
+    fill:false
+
+    }]
+
+    }
+
+    });
+
+</script>

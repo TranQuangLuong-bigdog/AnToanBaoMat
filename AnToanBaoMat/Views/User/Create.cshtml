@@ -1,0 +1,46 @@
+﻿@model AnToanBaoMat.Models.User
+
+<h2>Thêm người dùng</h2>
+
+<form asp-action="Create">
+
+    <div class="mb-3">
+        <label>Họ tên</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Mật khẩu</label>
+        <input asp-for="PasswordHash" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>SĐT</label>
+        <input asp-for="Phone" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Role</label>
+
+        <select asp-for="Role" class="form-select">
+
+            <option>Admin</option>
+
+            <option>Employer</option>
+
+            <option>Candidate</option>
+
+        </select>
+
+    </div>
+
+    <button class="btn btn-success">
+        Lưu
+    </button>
+
+</form>

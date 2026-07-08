@@ -1,0 +1,401 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-3 mb-4">
+
+        <div class="card dashboard-card bg-primary">
+
+            <i class="fa-solid fa-users fa-3x"></i>
+
+            <h2>@ViewBag.TotalUser</h2>
+
+            <p>Người dùng</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3 mb-4">
+
+        <div class="card dashboard-card bg-success">
+
+            <i class="fa-solid fa-briefcase fa-3x"></i>
+
+            <h2>@ViewBag.TotalJob</h2>
+
+            <p>Công việc</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3 mb-4">
+
+        <div class="card dashboard-card bg-warning">
+
+            <i class="fa-solid fa-file-arrow-up fa-3x"></i>
+
+            <h2>@ViewBag.TotalApplication</h2>
+
+            <p>CV đã gửi</p>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3 mb-4">
+
+        <div class="card dashboard-card bg-danger">
+
+            <i class="fa-solid fa-ban fa-3x"></i>
+
+            <h2>@ViewBag.TotalBlocked</h2>
+
+            <p>IP bị chặn</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="card shadow">
+
+            <div class="card-header">
+
+                Upload hôm nay
+
+            </div>
+
+            <div class="card-body text-center">
+
+                <h1>@ViewBag.TodayUpload</h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="card shadow">
+
+            <div class="card-header">
+
+                IP bị chặn hôm nay
+
+            </div>
+
+            <div class="card-body text-center">
+
+                <h1>@ViewBag.TodayBlocked</h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br />
+
+<div class="row">
+
+    <div class="col-lg-6">
+
+        <div class="card shadow">
+
+            <div class="card-header">
+
+                Trạng thái Upload
+
+            </div>
+
+            <div class="card-body">
+
+                <canvas id="uploadChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-6">
+
+        <div class="card shadow">
+
+            <div class="card-header">
+
+                Hệ thống bảo mật
+
+            </div>
+
+            <div class="card-body">
+
+                <canvas id="securityChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-3">
+
+    <div class="card dashboard-card">
+
+        <div class="card-body">
+
+            <h2>
+
+                @ViewBag.TotalEncrypt
+
+            </h2>
+
+            <p>
+
+                Encrypted CV
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-3">
+
+    <div class="card dashboard-card">
+
+        <div class="card-body">
+
+            <h2>
+
+                @ViewBag.TotalAudit
+
+            </h2>
+
+            <p>
+
+                Audit Log
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-lg-3">
+
+    <div class="card dashboard-card">
+
+        <div class="card-body">
+
+            <h2>
+
+                @ViewBag.TodayDownload
+
+            </h2>
+
+            <p>
+
+                Download Today
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="card mt-4 shadow">
+
+    <div class="card-header">
+
+        Recent Audit
+
+    </div>
+
+    <table class="table">
+
+        <thead>
+
+            <tr>
+
+                <th>User</th>
+
+                <th>Action</th>
+
+                <th>Time</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in ViewBag.RecentAudit)
+            {
+                <tr>
+
+                    <td>@item.UserId</td>
+
+                    <td>@item.Action</td>
+
+                    <td>@item.LogTime</td>
+
+                    <td>@item.Status</td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
+<div class="card mt-4 shadow">
+
+    <div class="card-header">
+
+        Recent Download
+
+    </div>
+
+    <table class="table">
+
+        <thead>
+
+            <tr>
+
+                <th>Employer</th>
+
+                <th>Application</th>
+
+                <th>Time</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in ViewBag.RecentDownload)
+            {
+                <tr>
+
+                    <td>@item.EmployerId</td>
+
+                    <td>@item.ApplicationId</td>
+
+                    <td>@item.DownloadTime</td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</div>
+<div class="card shadow">
+
+    <div class="card-header bg-success text-white">
+
+        Security Status
+
+    </div>
+
+    <div class="card-body">
+
+        <p>🟢 AES Encryption</p>
+
+        <p>🟢 SHA256 Integrity</p>
+
+        <p>🟢 Session Token</p>
+
+        <p>🟢 Nonce</p>
+
+        <p>🟢 MIME Validation</p>
+
+        <p>🟢 Extension Validation</p>
+
+        <p>🟢 Block IP</p>
+
+        <p>🟢 Download Log</p>
+
+    </div>
+
+</div>
+@section Scripts {
+
+    <script>
+
+        new Chart(document.getElementById("uploadChart"),{
+
+        type:"bar",
+
+        data:{
+
+        labels:["Thành công","Thất bại"],
+
+        datasets:[{
+
+        label:"Upload",
+
+        data:[
+
+        @ViewBag.SuccessUpload,
+
+        @ViewBag.FailUpload
+
+        ]
+
+        }]
+
+        }
+
+        });
+
+        new Chart(document.getElementById("securityChart"),{
+
+        type:"doughnut",
+
+        data:{
+
+        labels:["An toàn","Blocked"],
+
+        datasets:[{
+
+        data:[
+
+        @ViewBag.TotalApplication,
+
+        @ViewBag.TotalBlocked
+
+        ]
+
+        }]
+
+        }
+
+        });
+
+    </script>
+
+}

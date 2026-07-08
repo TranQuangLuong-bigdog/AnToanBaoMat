@@ -1,0 +1,707 @@
+﻿@model AnToanBaoMat.Models.Application
+
+@{
+    ViewData["Title"] = "Gửi CV";
+}
+
+<div class="container mt-5">
+
+    <div class="row">
+
+        <!-- LEFT -->
+
+        <div class="col-lg-8">
+
+            <div class="card shadow-lg upload-card">
+
+                <div class="card-header bg-primary text-white">
+
+                    <h3>
+
+                        <i class="fa-solid fa-file-arrow-up"></i>
+
+                        GỬI CV AN TOÀN
+
+                    </h3>
+
+                </div>
+
+                <div class="card-body">
+
+                    <form asp-action="Upload"
+                          method="post"
+                          enctype="multipart/form-data">
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+
+                            <label>
+
+                                Công việc
+
+                            </label>
+
+                            <select asp-for="JobId"
+                                    asp-items="ViewBag.JobId"
+                                    class="form-select">
+
+                                <option>
+
+                                    -- Chọn công việc --
+
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label>
+
+                                Địa chỉ IP
+
+                            </label>
+
+                            <input class="form-control"
+                                   readonly
+                                   value="@ViewBag.CurrentIP" />
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label>
+
+                                Upload CV
+
+                            </label>
+
+                            <div id="dropZone">
+
+                                <i class="fa-solid fa-cloud-arrow-up fa-4x"></i>
+
+                                <h4>
+
+                                    Kéo CV vào đây
+
+                                </h4>
+
+                                <p>
+
+                                    hoặc
+
+                                </p>
+
+                                <input type="file"
+                                       id="cvFile"
+                                       name="cvFile"
+                                       hidden />
+
+                                <button type="button"
+                                        id="btnChoose"
+                                        class="btn btn-primary">
+
+                                    Chọn File
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                        <div id="fileInfo"
+                             style="display:none;">
+
+                            <div class="alert alert-info">
+
+                                <b>Tên File:</b>
+
+                                <span id="fileName"></span>
+
+                                <br>
+
+                                <b>Kích thước:</b>
+
+                                <span id="fileSize"></span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="progress mt-3">
+
+                            <div id="progressBar"
+                                 class="progress-bar progress-bar-striped progress-bar-animated"
+                                 style="width:0%">
+
+                                0%
+
+                            </div>
+                            <div class="security-result mt-4">
+
+                                <div class="result-header">
+
+                                    <i class="fa-solid fa-shield-halved"></i>
+
+                                    <span>Kết quả phân tích bảo mật</span>
+
+                                </div>
+
+                                <div id="securityContent">
+
+                                    <div class="empty-state">
+
+                                        <i class="fa-solid fa-hand-pointer"></i>
+
+                                        <h4>Chọn một chức năng bên phải</h4>
+
+                                        <p>Xem chi tiết từng bước bảo mật sau khi upload.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <hr class="my-4" />
+
+                        <div class="result-card">
+
+                            <h4>
+
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                                Kết quả kiểm tra bảo mật
+
+                            </h4>
+
+                            <div id="resultPanel">
+
+                                <div class="text-center text-secondary py-4">
+
+                                    <i class="fa-solid fa-circle-info fa-2x mb-3"></i>
+
+                                    <p>
+
+                                        Chọn một chức năng bên phải để xem kết quả.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        @if (ViewBag.Error != null)
+                        {
+                            <div class="alert alert-danger">
+
+                                @ViewBag.Error
+
+                            </div>
+                        }
+
+                        <button class="btn btn-success btn-lg w-100">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Gửi CV
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="col-lg-4">
+
+            <div class="card security-card">
+
+                <div class="card-body">
+
+                    <h3>
+
+                        Trạng thái bảo mật
+
+                    </h3>
+
+                    <hr>
+
+                    <div class="security-item"
+                         onclick="showResult('ip')">
+
+                        🟢 Kiểm tra IP
+
+                    </div>
+
+                    <div class="security-item"
+                         onclick="showResult('spam')">
+
+                        🟢 Chống Spam
+
+                    </div>
+
+                    <div class="security-item"
+                         onclick="showResult('mime')">
+
+                        🟢 Kiểm tra MIME
+
+                    </div>
+
+                    <div class="security-item"
+                         onclick="showResult('extension')">
+
+                        🟢 Kiểm tra Extension
+
+                    </div>
+
+                    <div class="security-item"
+                         onclick="showResult('encrypt')">
+
+                        🟢 Mã hóa tên File
+
+                    </div>
+
+                    <div class="security-item"
+                         onclick="showResult('log')">
+
+                        🟢 Ghi nhật ký Upload
+
+                    </div>
+
+                    <div class="security-item"
+                         onclick="showResult('size')">
+
+                        🟢 Kiểm tra dung lượng
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+
+    function showResult(type){
+
+    let panel=document.getElementById("resultPanel");
+
+    switch(type){
+
+    case "ip":
+
+    panel.innerHTML=`
+
+    <h5>🌍 Kiểm tra IP</h5>
+
+    <table class="table table-dark">
+
+    <tr>
+
+    <td>IP</td>
+
+    <td>@ViewBag.CurrentIP</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Blacklist</td>
+
+    <td class="text-success">
+
+    ✔ Không phát hiện
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>Kết quả</td>
+
+    <td>
+
+    An toàn
+
+    </td>
+
+    </tr>
+
+    </table>
+
+    `;
+
+    break;
+
+    case "spam":
+
+    panel.innerHTML=`
+
+    <h5>🚫 Chống Spam</h5>
+
+    <p>
+
+    ✔ Người dùng chưa vượt quá giới hạn Upload.
+
+    </p>
+
+    <p>
+
+    ✔ Không phát hiện Bot.
+
+    </p>
+
+    `;
+
+    break;
+
+    case "mime":
+
+    panel.innerHTML=`
+
+    <h5>📄 Kiểm tra MIME</h5>
+
+    <p>
+
+    application/pdf
+
+    </p>
+
+    <p class="text-success">
+
+    ✔ MIME hợp lệ
+
+    </p>
+
+    `;
+
+    break;
+
+    case "extension":
+
+    panel.innerHTML=`
+
+    <h5>📎 Kiểm tra Extension</h5>
+
+    <p>
+
+    .pdf
+
+    </p>
+
+    <p class="text-success">
+
+    ✔ Được phép Upload
+
+    </p>
+
+    `;
+
+    break;
+
+    case "encrypt":
+
+    panel.innerHTML=`
+
+    <h5>🔐 Mã hóa tên File</h5>
+
+    <p>
+
+    Tên cũ
+
+    →
+
+    CV.pdf
+
+    </p>
+
+    <p>
+
+    Tên mới
+
+    →
+
+    a74fd28a.pdf
+
+    </p>
+
+    `;
+
+    break;
+
+    case "log":
+
+    panel.innerHTML=`
+
+    <h5>📝 Nhật ký Upload</h5>
+
+    <table class="table table-dark">
+
+    <tr>
+
+    <td>User</td>
+
+    <td>
+
+    @Context.Session.GetString("UserName")
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>IP</td>
+
+    <td>
+
+    @ViewBag.CurrentIP
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>Thời gian</td>
+
+    <td>
+
+    @DateTime.Now
+
+    </td>
+
+    </tr>
+
+    </table>
+
+    `;
+
+    break;
+
+    case "size":
+
+    panel.innerHTML=`
+
+    <h5>💾 Kiểm tra dung lượng</h5>
+
+    <p>
+
+    Giới hạn
+
+    5MB
+
+    </p>
+
+    <p class="text-success">
+
+    ✔ File hợp lệ
+
+    </p>
+
+    `;
+
+    break;
+
+    }
+
+    }
+        const result = {
+
+    ip: `
+    <h3>🌍 Kiểm tra IP</h3>
+
+    <table class="table table-dark">
+
+    <tr>
+
+    <td>IP hiện tại</td>
+
+    <td>192.168.1.100</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Blacklist</td>
+
+    <td class="text-success">
+
+    ✔ Không phát hiện
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>Đánh giá</td>
+
+    <td>
+
+    Địa chỉ IP an toàn
+
+    </td>
+
+    </tr>
+
+    </table>
+    `,
+
+    spam:`
+    <h3>🚫 Chống Spam</h3>
+
+    <div class="alert alert-success">
+
+    Không phát hiện spam.
+
+    </div>
+
+    <ul>
+
+    <li>Upload lần đầu</li>
+
+    <li>Không vượt giới hạn</li>
+
+    <li>Không phải Bot</li>
+
+    </ul>
+    `,
+
+    mime:`
+    <h3>📄 MIME Type</h3>
+
+    <table class="table table-dark">
+
+    <tr>
+
+    <td>File</td>
+
+    <td>CV.pdf</td>
+
+    </tr>
+
+    <tr>
+
+    <td>MIME</td>
+
+    <td>application/pdf</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Kết quả</td>
+
+    <td class="text-success">
+
+    ✔ Hợp lệ
+
+    </td>
+
+    </tr>
+
+    </table>
+    `,
+
+    extension:`
+    <h3>📁 Extension</h3>
+
+    <div class="badge bg-success">
+
+    .pdf
+
+    </div>
+
+    <p>
+
+    Cho phép upload.
+
+    </p>
+    `,
+
+    encrypt:`
+    <h3>🔐 Mã hóa File</h3>
+
+    Tên cũ
+
+    <pre>CV.pdf</pre>
+
+    ↓
+
+    Tên mới
+
+    <pre>
+
+    2D8A7F9E-81AA-44D1.pdf
+
+    </pre>
+    `,
+
+    log:`
+    <h3>📝 Nhật ký Upload</h3>
+
+    <table class="table table-dark">
+
+    <tr>
+
+    <td>User</td>
+
+    <td>Lương Trần</td>
+
+    </tr>
+
+    <tr>
+
+    <td>IP</td>
+
+    <td>192.168.1.100</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Thời gian</td>
+
+    <td>07/07/2026</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Trạng thái</td>
+
+    <td class="text-success">
+
+    Upload thành công
+
+    </td>
+
+    </tr>
+
+    </table>
+    `
+
+    };
+
+    function showSecurity(type){
+
+    document.getElementById("securityContent").innerHTML=result[type];
+
+    }
+</script>
