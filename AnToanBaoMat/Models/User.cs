@@ -21,6 +21,12 @@ public partial class User
 
     public string? SessionToken { get; set; }
 
+    public string? LastIp { get; set; }
+
+    public string? LastDevice { get; set; }
+
+    public DateTime? LastLogin { get; set; }
+
     public virtual ICollection<Application> Applications { get; set; } = new List<Application>();
 
     public virtual ICollection<CvuploadLog> CvuploadLogs { get; set; } = new List<CvuploadLog>();

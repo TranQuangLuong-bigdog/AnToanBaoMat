@@ -27,7 +27,9 @@ namespace AnToanBaoMat.Controllers
                 .Count(x => x.ExpireTime < DateTime.Now);
             ViewBag.User =
                 HttpContext.Session.GetString("UserName");
-
+            ViewBag.TotalEncrypt =
+                _context.Applications
+                .Count(x => x.Cvfile.EndsWith(".enc"));
             ViewBag.TotalUser =
                 _context.Users.Count();
 

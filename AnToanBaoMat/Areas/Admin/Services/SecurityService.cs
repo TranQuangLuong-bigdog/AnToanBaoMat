@@ -1,5 +1,6 @@
 ﻿using AnToanBaoMat.Data;
 using AnToanBaoMat.Models;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AnToanBaoMat.Services
 {
@@ -104,6 +105,29 @@ namespace AnToanBaoMat.Services
                 Message = message
             });
 
+            _context.SaveChanges();
+
+        }
+        public void AddEvent(
+            int? userId,
+            string eventType,
+            string description,
+            string ip,
+            string severity = "LOW",
+            string status = "SUCCESS")
+        {
+            var security = new SecurityEvent
+            {
+                UserId = userId,
+                EventType = eventType,
+                Description = description,
+                Ipaddress = ip,
+                EventTime = DateTime.Now,
+                Severity = severity,
+                Status = status,
+                Device = "Web Browser"
+            };
+            _context.SecurityEvents.Add(security);
             _context.SaveChanges();
         }
     }

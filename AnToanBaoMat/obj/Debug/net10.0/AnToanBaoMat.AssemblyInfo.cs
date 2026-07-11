@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AnToanBaoMat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47deb037b7e484125646b87668c4654d8289433c")]
 [assembly: System.Reflection.AssemblyProductAttribute("AnToanBaoMat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AnToanBaoMat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 
+
 namespace AnToanBaoMat.Controllers
 {
     [RoleAuthorize("Employer")]
@@ -15,19 +16,30 @@ namespace AnToanBaoMat.Controllers
         private readonly IWebHostEnvironment _environment;
         private readonly EncryptionService _encrypt;
         private readonly ISecurityService _security;
-
+        private readonly DigitalSignatureService _signature;
+        private readonly IntrusionDetectionService _ids;
+        private readonly OtpService _otp;
+        private readonly MailService _mail;
         public DownloadController(
             JobRecruitmentDbContext context,
             IWebHostEnvironment environment,
             EncryptionService encrypt,
             ISecurityService security,
-            AuditService audit)
+            AuditService audit,
+            DigitalSignatureService signature,
+            IntrusionDetectionService ids,
+            OtpService otp,
+            MailService mail)
         {
             _context = context;
             _environment = environment;
             _encrypt = encrypt;
             _security = security;
             _audit = audit;
+            _signature = signature;
+            _ids = ids;
+            _otp = otp;
+            _mail = mail;
         }
 
         public IActionResult Index()
@@ -45,7 +57,104 @@ namespace AnToanBaoMat.Controllers
 
             return View(list);
         }
+        public IActionResult SendOTP(int id)
+        {
+            int userId =
+                HttpContext.Session.GetInt32("UserId") ?? 0;
 
+            var user =
+                _context.Users.Find(userId);
+
+            if (user == null)
+                return RedirectToAction("Login", "Account");
+
+            string otp =
+                _otp.GenerateOTP();
+
+            _context.DownloadOtps.Add(new DownloadOtp
+            {
+                UserId = userId,
+                ApplicationId = id,
+
+                Otpcode = otp,
+
+                Otptype = "EMAIL",
+
+                CreatedTime = DateTime.Now,
+
+                ExpireTime = DateTime.Now.AddMinutes(5),
+
+                IsUsed = false
+            });
+            _mail.SendEmail(
+                user.Email!,
+                "CV SAFE - Mã OTP xác thực",
+                $@"
+                <h2>CV SAFE</h2>
+
+                <p>Xin chào {user.FullName},</p>
+
+                <p>Bạn vừa yêu cầu tải CV.</p>
+
+                <h1 style='color:red'>{otp}</h1>
+
+                <p>Mã OTP có hiệu lực trong <b>5 phút</b>.</p>
+
+                <p>Nếu không phải bạn thực hiện yêu cầu này, vui lòng đổi mật khẩu ngay.</p>
+            ");
+
+            _context.SaveChanges();
+
+
+            return RedirectToAction("VerifyOTP", new { id = id });
+        }
+        [HttpGet]
+        public IActionResult VerifyOTP(int id)
+        {
+            ViewBag.ApplicationId = id;
+
+            return View();
+        }
+        [HttpPost]
+        public IActionResult VerifyOTP(int applicationId, string otp)
+        {
+            int userId =
+                HttpContext.Session.GetInt32("UserId") ?? 0;
+
+            var code = _context.DownloadOtps
+                .Where(x => x.UserId == userId &&
+                            x.ApplicationId == applicationId &&
+                            x.IsUsed == false)
+                .OrderByDescending(x => x.CreatedTime)
+                .FirstOrDefault();
+
+            if (code == null)
+            {
+                TempData["Error"] = "Không có OTP.";
+                ViewBag.ApplicationId = applicationId;
+                return View();
+            }
+
+            if (code.ExpireTime < DateTime.Now)
+            {
+                TempData["Error"] = "OTP đã hết hạn.";
+                ViewBag.ApplicationId = applicationId;
+                return View();
+            }
+
+            if (code.Otpcode != otp)
+            {
+                TempData["Error"] = "OTP không đúng.";
+                ViewBag.ApplicationId = applicationId;
+                return View();
+            }
+
+            code.IsUsed = true;
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Decrypt", new { id = applicationId });
+        }
         public IActionResult Download(int id)
         {
             //=========================
@@ -166,6 +275,21 @@ namespace AnToanBaoMat.Controllers
 
             byte[] fileBytes = System.IO.File.ReadAllBytes(tempFile);
 
+            bool verify = _signature.Verify(
+                fileBytes,
+                application.Signature!,
+                application.PublicKey!);
+
+            if (!verify)
+            {
+                System.IO.File.Delete(tempFile);
+
+                return Content("Digital Signature không hợp lệ.");
+            }
+
+            application.IsVerified = true;
+
+            _context.SaveChanges();
 
             //=========================
             // Xóa file tạm
@@ -188,6 +312,53 @@ namespace AnToanBaoMat.Controllers
                 GetContentType(application.OriginalFileName),
                 application.OriginalFileName);
         }
+        public IActionResult AES(int id)
+        {
+            var application = _context.Applications.Find(id);
+
+            if (application == null)
+                return NotFound();
+
+            ViewBag.Algorithm = "AES-256 CBC";
+            ViewBag.Status = "Decrypt Success";
+
+            return View(application);
+        }
+        public IActionResult VerifyHash(int id)
+        {
+            var application = _context.Applications.Find(id);
+
+            if (application == null)
+                return NotFound();
+
+            ViewBag.Hash = application.FileHash;
+            ViewBag.Result = "✔ Hash hợp lệ";
+
+            return View(application);
+        }
+        public IActionResult VerifySignature(int id)
+        {
+            var application = _context.Applications.Find(id);
+
+            if (application == null)
+                return NotFound();
+
+            ViewBag.PublicKey = application.PublicKey;
+            ViewBag.Signature = application.Signature;
+            ViewBag.Result = "✔ Digital Signature hợp lệ";
+
+            return View(application);
+        }
+        public IActionResult SecurityInfo(int id)
+        {
+            var app = _context.Applications
+                .FirstOrDefault(x => x.ApplicationId == id);
+
+            if (app == null)
+                return Content("Không tìm thấy.");
+
+            return PartialView("_SecurityInfo", app);
+        }
         public IActionResult Decrypt(int id)
         {
             if (HttpContext.Session.GetString("Role") != "Employer")
@@ -206,6 +377,13 @@ namespace AnToanBaoMat.Controllers
             // Kiểm tra hết hạn
             if (application.ExpireTime <= DateTime.Now)
             {
+                _ids.Detect(
+                    HttpContext.Session.GetInt32("UserId"),
+                    HttpContext.Connection.RemoteIpAddress?.ToString() ?? "",
+                    "Expired CV",
+                    "MEDIUM",
+                    "Download CV hết hạn.");
+
                 return Content("CV đã hết hạn.");
             }
             if (application == null)
@@ -272,7 +450,38 @@ namespace AnToanBaoMat.Controllers
 
             // Đọc file
             byte[] bytes = System.IO.File.ReadAllBytes(tempFile);
+            bool verify = false;
 
+            try
+            {
+                verify = _signature.Verify(
+                    bytes,
+                    application.Signature!,
+                    application.PublicKey!);
+            }
+            catch
+            {
+                verify = false;
+            }
+
+            // Lưu trạng thái Verify
+            application.IsVerified = verify;
+
+            _context.SaveChanges();
+
+            // Không chặn download
+            if (!verify)
+            {
+                _ids.Detect(
+                    HttpContext.Session.GetInt32("UserId"),
+                    HttpContext.Connection.RemoteIpAddress?.ToString() ?? "",
+                    "Digital Signature",
+                    "HIGH",
+                    "Verify thất bại khi Download.");
+
+                TempData["Warning"] =
+                    "Digital Signature không hợp lệ.";
+            }
             // Xóa file tạm
             System.IO.File.Delete(tempFile);
 
@@ -283,19 +492,23 @@ namespace AnToanBaoMat.Controllers
                 EmployerId = HttpContext.Session.GetInt32("UserId") ?? 0,
                 DownloadTime = DateTime.Now,
                 Ip = HttpContext.Connection.RemoteIpAddress?.ToString(),
-                Status = "Decrypt + Download"
+                Status = verify
+                    ? "Verified + Download"
+                    : "Download (Verify Failed)"
             });
 
             _context.SaveChanges();
 
             Console.WriteLine(application.Cvfile);
-            // Ghi Audit
+            // Ghi Audit    
             _audit.Write(
                 HttpContext.Session.GetInt32("UserId"),
                 "DECRYPT",
-                "Giải mã và tải CV",
+                verify
+                    ? "Giải mã + Verify thành công"
+                    : "Giải mã nhưng Verify thất bại",
                 HttpContext.Connection.RemoteIpAddress?.ToString() ?? "",
-                "SUCCESS");
+                verify ? "SUCCESS" : "WARNING");
 
             // Tên file tải về
             string downloadName = application.OriginalFileName;

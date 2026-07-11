@@ -16,4 +16,12 @@ public partial class SecurityEvent
     public string? Ipaddress { get; set; }
 
     public DateTime? EventTime { get; set; }
+
+    public string? Device { get; set; }
+
+    public string? Severity { get; set; }
+
+    public string? Status { get; set; }
+
+    public int? ApplicationId { get; set; }
 }

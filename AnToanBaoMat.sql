@@ -700,3 +700,11 @@ ADD LastIP NVARCHAR(100) NULL,
 
     SELECT LastIP, LastDevice, LastLogin
 FROM Users;
+
+SELECT TOP 5
+ApplicationId,
+CvFile,
+OriginalFileName,
+UserId
+FROM Applications
+ORDER BY ApplicationId DESC;

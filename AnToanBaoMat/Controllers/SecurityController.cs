@@ -1,4 +1,5 @@
 ﻿using AnToanBaoMat.Data;
+using AnToanBaoMat.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnToanBaoMat.Controllers
@@ -40,6 +41,7 @@ namespace AnToanBaoMat.Controllers
 
             return View();
         }
+        
         public IActionResult Attack()
         {
             var topIP = _context.Applications
@@ -62,6 +64,14 @@ namespace AnToanBaoMat.Controllers
             ViewBag.TopIP = topIP;
 
             return View();
+        }
+        public IActionResult Events()
+        {
+            var list = _context.SecurityEvents
+                .OrderByDescending(x => x.EventTime)
+                .ToList();
+
+            return View(list);
         }
     }
 }

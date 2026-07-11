@@ -33,6 +33,18 @@ public partial class Application
 
     public string? OriginalFileName { get; set; }
 
+    public bool IsEncrypted { get; set; }
+
+    public string? PublicKey { get; set; }
+
+    public string? PrivateKey { get; set; }
+
+    public string? Signature { get; set; }
+
+    public bool IsSigned { get; set; }
+
+    public bool IsVerified { get; set; }
+
     public virtual Job Job { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;

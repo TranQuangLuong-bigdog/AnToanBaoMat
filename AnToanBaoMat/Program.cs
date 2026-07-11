@@ -16,14 +16,15 @@ namespace AnToanBaoMat
                     builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<ISecurityService, SecurityService>();
-
+            builder.Services.AddScoped<IntrusionDetectionService>();
             builder.Services.AddSingleton<EncryptionService>();
-
+            builder.Services.AddScoped<OtpService>();
             // MVC
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddScoped<MailService>();
             builder.Services.AddScoped<AuditService>();
-
+            builder.Services.AddScoped<DigitalSignatureService>();
+            builder.Services.AddScoped<RSAService>();
             // Session
             builder.Services.AddDistributedMemoryCache();
 

@@ -4,6 +4,7 @@ using AnToanBaoMat.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Cryptography;
+using System.Security.Cryptography.Xml;
 
 namespace AnToanBaoMat.Controllers
 {
@@ -16,19 +17,27 @@ namespace AnToanBaoMat.Controllers
         private readonly IWebHostEnvironment _environment;
         private readonly ISecurityService _security;
         private readonly EncryptionService _encrypt;
-
+        private readonly RSAService _rsa;
+        private readonly DigitalSignatureService _signature;
+        private readonly IntrusionDetectionService _ids;
         public ApplicationController(
             JobRecruitmentDbContext context,
             IWebHostEnvironment environment,
             ISecurityService security,
             EncryptionService encrypt,
-            AuditService audit)
+            AuditService audit,
+            RSAService rsa,
+            DigitalSignatureService signature,
+            IntrusionDetectionService ids)
         {
             _context = context;
             _environment = environment;
             _security = security;
             _encrypt = encrypt;
+            _rsa = rsa;
             _audit = audit;
+            _signature = signature;
+            _ids = ids;
         }
         //=============================
         // Lịch sử gửi CV
@@ -86,6 +95,13 @@ namespace AnToanBaoMat.Controllers
                 "JobId",
                 "JobTitle");
 
+            ViewBag.AES = "Chưa thực hiện";
+
+            ViewBag.SHA256 = "Chưa tạo";
+
+            ViewBag.RSA = "Chưa tạo";
+
+            ViewBag.Signature = "Chưa ký";
             ViewBag.CurrentIP =
                 HttpContext.Connection.RemoteIpAddress?.ToString();
             
@@ -145,7 +161,15 @@ namespace AnToanBaoMat.Controllers
 
             if (replay)
             {
-                ViewBag.Error = "Replay Attack được phát hiện.";
+                _ids.Detect(
+                    model.UserId,
+                    ip,
+                    "Replay Attack",
+                    "HIGH",
+                    "Nonce bị sử dụng nhiều lần.");
+
+                ViewBag.Error =
+                    "Replay Attack được phát hiện.";
 
                 return View(model);
             }
@@ -206,6 +230,12 @@ namespace AnToanBaoMat.Controllers
 
                 ViewBag.Error = "Bạn đã gửi quá nhiều CV. IP đã bị tạm khóa.";
 
+                _ids.Detect(
+                    model.UserId,
+                    ip,
+                    "Spam Upload",
+                    "MEDIUM",
+                    "Upload quá nhiều trong thời gian ngắn.");
                 return View(model);
             }
 
@@ -319,8 +349,39 @@ namespace AnToanBaoMat.Controllers
                 folder,
                 Guid.NewGuid().ToString() + ".enc");
 
-            _encrypt.EncryptFile(filePath, encryptedFile);
+            var key = _rsa.GenerateKey();
 
+            model.PublicKey = key.PublicKey;
+
+            model.PrivateKey = key.PrivateKey;
+
+            // Ký file gốc trước khi xóa
+            byte[] originalBytes =
+                System.IO.File.ReadAllBytes(filePath);
+
+            model.Signature =
+                _signature.Sign(
+                    originalBytes,
+                    model.PrivateKey);
+            _encrypt.EncryptFile(filePath, encryptedFile);
+            _audit.Write(
+                HttpContext.Session.GetInt32("UserId"),
+                "AES",
+                "AES Encrypt File",
+                HttpContext.Connection.RemoteIpAddress?.ToString() ?? "",
+                "SUCCESS");
+            _audit.Write(
+                model.UserId,
+                "RSA",
+                "Generate RSA Key",
+                ip,
+                "SUCCESS");
+            _audit.Write(
+                model.UserId,
+                "SIGNATURE",
+                "Digital Signature",
+                ip,
+                "SUCCESS");
             // Xóa file gốc
             System.IO.File.Delete(filePath);
             Console.WriteLine(model.Cvfile);    
@@ -362,8 +423,16 @@ namespace AnToanBaoMat.Controllers
                 //----------------------------------------
                 Console.WriteLine(model.OriginalFileName);
 
+                // Đã mã hóa bằng AES
+                model.IsEncrypted = true;
+
+                model.IsEncrypted = true;
+                model.IsSigned = true;
+                model.IsVerified = false;
+
                 _context.Applications.Add(model);
-                model.ApplyTime = DateTime.Now;
+
+                await _context.SaveChangesAsync();
 
                 model.ExpireTime = DateTime.Now.AddDays(7);
 
@@ -395,6 +464,17 @@ namespace AnToanBaoMat.Controllers
                 await transaction.CommitAsync();
 
                 TempData["Success"] = "Gửi CV thành công.";
+                TempData["AES"] = "AES-256 CBC";
+
+                TempData["SHA"] = hashString;
+
+                TempData["RSA"] = "2048-bit";
+
+                TempData["SIGN"] = "Generated";
+
+                TempData["Original"] = cvFile.FileName;
+
+                TempData["Encrypted"] = model.Cvfile;
 
                 return RedirectToAction(nameof(Index));
             }
@@ -434,6 +514,58 @@ namespace AnToanBaoMat.Controllers
 
                 return View(model);
             }
+        }
+        public IActionResult Encrypt(int id)
+        {
+            var application = _context.Applications
+                .FirstOrDefault(x => x.ApplicationId == id);
+
+            if (application == null)
+            {
+                return NotFound();
+            }
+
+            if (application.IsEncrypted == true)
+            {
+                TempData["Error"] = "File đã được mã hóa.";
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            string folder = Path.Combine(
+                _environment.WebRootPath,
+                "uploads",
+                "cv");
+
+            string inputFile = Path.Combine(
+                folder,
+                application.Cvfile);
+
+            if (!System.IO.File.Exists(inputFile))
+            {
+                TempData["Error"] = "Không tìm thấy file.";
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            string encryptedFile = inputFile + ".enc";
+
+            _encrypt.EncryptFile(
+                inputFile,
+                encryptedFile);
+
+            System.IO.File.Delete(inputFile);
+
+            application.Cvfile =
+                Path.GetFileName(encryptedFile);
+
+            application.IsVerified = true;
+
+            _context.SaveChanges();
+
+            TempData["Success"] = "AES Encrypt thành công.";
+
+            return RedirectToAction(nameof(Index));
         }
 
     }

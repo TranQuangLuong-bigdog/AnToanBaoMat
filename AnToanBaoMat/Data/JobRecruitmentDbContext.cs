@@ -26,6 +26,8 @@ public partial class JobRecruitmentDbContext : DbContext
 
     public virtual DbSet<DownloadLog> DownloadLogs { get; set; }
 
+    public virtual DbSet<DownloadOtp> DownloadOtps { get; set; }
+
     public virtual DbSet<Job> Jobs { get; set; }
 
     public virtual DbSet<SecurityEvent> SecurityEvents { get; set; }
@@ -38,7 +40,7 @@ public partial class JobRecruitmentDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=.;Database=JobRecruitmentDB;Trusted_Connection=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=DODIEU;Database=JobRecruitmentDB;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -152,6 +154,24 @@ public partial class JobRecruitmentDbContext : DbContext
             entity.Property(e => e.Status).HasMaxLength(50);
         });
 
+        modelBuilder.Entity<DownloadOtp>(entity =>
+        {
+            entity.HasKey(e => e.Otpid).HasName("PK__Download__5C2EC4824FA4C269");
+
+            entity.ToTable("DownloadOTP");
+
+            entity.Property(e => e.Otpid).HasColumnName("OTPId");
+            entity.Property(e => e.CreatedTime).HasColumnType("datetime");
+            entity.Property(e => e.ExpireTime).HasColumnType("datetime");
+            entity.Property(e => e.IsUsed).HasDefaultValue(false);
+            entity.Property(e => e.Otpcode)
+                .HasMaxLength(6)
+                .HasColumnName("OTPCode");
+            entity.Property(e => e.Otptype)
+                .HasMaxLength(20)
+                .HasColumnName("OTPType");
+        });
+
         modelBuilder.Entity<Job>(entity =>
         {
             entity.HasKey(e => e.JobId).HasName("PK__Jobs__056690C28D477FCE");
@@ -170,6 +190,7 @@ public partial class JobRecruitmentDbContext : DbContext
             entity.HasKey(e => e.EventId).HasName("PK__Security__7944C810356B41BD");
 
             entity.Property(e => e.Description).HasMaxLength(500);
+            entity.Property(e => e.Device).HasMaxLength(255);
             entity.Property(e => e.EventTime)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -177,6 +198,8 @@ public partial class JobRecruitmentDbContext : DbContext
             entity.Property(e => e.Ipaddress)
                 .HasMaxLength(50)
                 .HasColumnName("IPAddress");
+            entity.Property(e => e.Severity).HasMaxLength(20);
+            entity.Property(e => e.Status).HasMaxLength(30);
         });
 
         modelBuilder.Entity<SecuritySetting>(entity =>
@@ -203,6 +226,10 @@ public partial class JobRecruitmentDbContext : DbContext
                 .HasColumnType("datetime");
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.FullName).HasMaxLength(100);
+            entity.Property(e => e.LastIp)
+                .HasMaxLength(100)
+                .HasColumnName("LastIP");
+            entity.Property(e => e.LastLogin).HasColumnType("datetime");
             entity.Property(e => e.PasswordHash).HasMaxLength(255);
             entity.Property(e => e.Phone).HasMaxLength(20);
             entity.Property(e => e.Role)
